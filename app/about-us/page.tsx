@@ -7,6 +7,11 @@ import tranlationPerson from '@/public/images/translation-person.jpg'
 import translationRelative from '@/public/images/translation-relative.jpg'
 import dots from '@/public/images/dots.svg'
 import Image from 'next/image'
+import aboutus1 from '@/public/images/aboutus1.png'
+import aboutus2 from '@/public/images/aboutus2.png'
+import aboutus3 from '@/public/images/aboutus3.jpg'
+import aboutus4 from '@/public/images/aboutus4.jpg'
+
 
 const Page: React.FC = () => {
   return (
@@ -23,8 +28,8 @@ const Page: React.FC = () => {
     </div>
     <div className="relative lg:ml-0 ml-36 mt-5">
         <Image src={dots} width={400} alt='dots' className='absolute top-10 -left-20 -z-10 rounded w-20' />
-        <Image src={translationRelative} width={400} height={350} alt='transltion-relative' className='rounded-md ' />
-        <Image src={tranlationPerson} width={280} alt='transltion-relative' className='absolute -left-36 bottom-0 rounded-md' />
+        <Image src={aboutus2} width={400} height={350} alt='transltion-relative' className='rounded-md ' />
+        <Image src={aboutus1} width={280} alt='transltion-relative' className='absolute -left-36 bottom-0 rounded-md' />
     </div>
 </div>
 </div>
@@ -45,8 +50,8 @@ const Page: React.FC = () => {
       <div className="flex flex-col  lg:flex-row mt-8 lg:gap-10 lg:items-center justify-end items-center  mx-auto w-full lg:max-w-screen-xl">
     <div className="relative lg:ml-0 ml-44 mt-5">
         <Image src={dots} width={400} alt='dots' className='absolute top-10 -left-20 -z-10 rounded w-20' />
-        <Image src={translationRelative} width={400} height={350} alt='transltion-relative' className='rounded-md ' />
-        <Image src={tranlationPerson} width={280} alt='transltion-relative' className='absolute -left-36 bottom-0 rounded-md' />
+        <Image src={aboutus3} width={400} height={350} alt='transltion-relative' className='rounded-md ' />
+        <Image src={aboutus4} width={280} alt='transltion-relative' className='absolute -left-36 bottom-0 rounded-md' />
     </div>
     <div className="lg:w-1/2  mt-4 md:mt-0 leading-relaxed p-2">
     <h1 className="text-2xl font-bold mb-5 text-left text-blue-400">
@@ -67,8 +72,8 @@ const Page: React.FC = () => {
     </div>
     <div className="relative lg:ml-0 ml-36 mt-5">
         <Image src={dots} width={400} alt='dots' className='absolute top-10 -left-20 -z-10 rounded w-20' />
-        <Image src={translationRelative} width={400} height={350} alt='transltion-relative' className='rounded-md ' />
-        <Image src={tranlationPerson} width={280} alt='transltion-relative' className='absolute -left-36 bottom-0 rounded-md' />
+        <Image src={aboutus2} width={400} height={350} alt='transltion-relative' className='rounded-md ' />
+        <Image src={aboutus1} width={280} alt='transltion-relative' className='absolute -left-36 bottom-0 rounded-md' />
     </div>
 </div>
 </div>
@@ -77,8 +82,8 @@ const Page: React.FC = () => {
       <div className="flex flex-col  lg:flex-row mt-8 lg:gap-10 lg:items-center justify-end items-center  mx-auto w-full lg:max-w-screen-xl">
     <div className="relative lg:ml-0 ml-44 mt-5">
         <Image src={dots} width={400} alt='dots' className='absolute top-10 -left-20 -z-10 rounded w-20' />
-        <Image src={translationRelative} width={400} height={350} alt='transltion-relative' className='rounded-md ' />
-        <Image src={tranlationPerson} width={280} alt='transltion-relative' className='absolute -left-36 bottom-0 rounded-md' />
+        <Image src={aboutus3} width={400} height={350} alt='transltion-relative' className='rounded-md ' />
+        <Image src={aboutus4} width={280} alt='transltion-relative' className='absolute -left-36 bottom-0 rounded-md' />
     </div>
     <div className="lg:w-1/2  mt-4 md:mt-0 leading-relaxed p-2">
     <h1 className="text-2xl font-bold mb-5 text-left text-blue-400">
