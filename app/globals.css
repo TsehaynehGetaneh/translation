@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
  
+/* globals.css */
+@layer components {
+  .clip-path-custom {
+     clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .clip-path-custom2 {
+    clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 0% 100%);
+ }
+ 
+  /* Remove clip-path on smaller devices */
+  @media (max-width: 1024px) {
+     .clip-path-custom {
+       clip-path: none;
+     }
+     .clip-path-custom2 {
+      clip-path: none;
+    }
+  }
+ }
+
+ /* In your global stylesheet or a CSS module */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.sending {
+ animation: spin 2s linear infinite;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

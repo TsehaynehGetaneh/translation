@@ -1,115 +1,110 @@
-'use client';
+"use client"
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import HoverCard from './HoverCard';
+import * as React from "react"
+import Link from "next/link"
 
-function Navbar() {
-    const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+import { cn } from "@/lib/utils"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import { Button } from "./ui/button"
 
-    const handleLinkMouseEnter = (link: string) => {
-        setHoveredLink(link);
-    };
 
-    const handleLinkMouseLeave = () => {
-        setHoveredLink(null);
-    };
-
-    return (
-        <header className='py-4 px-4 text-sm sm:px-10 z-50 flex flex-col items-center justify-center min-h-[150px] sticky top-0'>
-            <div className='relative flex flex-wrap mx-auto items-center'>
-                <Link href="/">
-                    <img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' />
-                </Link>
-                <div className='flex ml-auto lg:order-1'>
-                    <button className='px-3 py-2 rounded-full text-white bg-[#53AFFA] transition-all ml-28 '>Get a quote</button>
-                    <button id="toggle" className='lg:hidden ml-7'>
-                        <svg className="w-5 h-5" fill="#000" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                <ul id="collapseMenu" className='lg:!flex lg:space-x-3 max-lg:space-y-3 max-lg:hidden max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[250px] max-lg:top-0 max-lg:left-0 max-lg:p-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto max-lg:z-50'>
-                    <li className='max-lg:border-b max-lg:py-2 px-3'>
-                        <Link 
-                            href="/" 
-                            onMouseEnter={() => handleLinkMouseEnter('Home')} 
-                            onMouseLeave={handleLinkMouseLeave} 
-                            className='cursor-pointer lg:hover:text-blue-600 block transition-all'
-                        >
-                            Home
-                        </Link>
-                    </li>
-                    <li className='reltive max-lg:border-b max-lg:py-2 px-3'>
-                        <div 
-                            onMouseEnter={() => handleLinkMouseEnter('Services')} 
-                            onMouseLeave={handleLinkMouseLeave} 
-                            className=' lg:hover:text-blue-600 block transition-all'
-                        >
-                            Services
-                            {hoveredLink === 'Services' && (
-                                <div className='absolute mt-5 top-0 left-[20%]'>
-                                    <HoverCard 
-                                        titles={["Translation Services", "Transcription Services"]} 
-                                        onMouseEnter={() => handleLinkMouseEnter('Services')} 
-                                        onMouseLeave={handleLinkMouseLeave} 
-                                    />
-                                </div>
-                            )}
-                        </div>
-                    </li>
-                    <li className='max-lg:border-b max-lg:py-2 px-3'>
-                        <Link 
-                            href="/languages" 
-                            onMouseEnter={() => handleLinkMouseEnter('Languages')} 
-                            onMouseLeave={handleLinkMouseLeave} 
-                            className='cursor-pointer lg:hover:text-blue-600 block transition-all'
-                        >
-                            Languages
-                            {hoveredLink === 'Languages' && (
-                                <div className='absolute mt-5 top-0 left-[35%]'>
-                                    <HoverCard 
-                                        titles={["Languages", "History Of Languages"]} 
-                                        onMouseEnter={() => handleLinkMouseEnter('Languages')} 
-                                        onMouseLeave={handleLinkMouseLeave} 
-                                    />
-                                </div>
-                            )}
-                        </Link>
-                    </li>
-                    <li className='max-lg:border-b max-lg:py-2 px-3'>
-                        <Link 
-                            href="/about" 
-                            onMouseEnter={() => handleLinkMouseEnter('About')} 
-                            onMouseLeave={handleLinkMouseLeave} 
-                            className='cursor-pointer lg:hover:text-blue-600 block transition-all'
-                        >
-                            About Us
-                        </Link>
-                    </li>
-                    <li className='max-lg:border-b max-lg:py-2 px-3'>
-                        <Link 
-                            href="/contact" 
-                            onMouseEnter={() => handleLinkMouseEnter('Contact')} 
-                            onMouseLeave={handleLinkMouseLeave} 
-                            className='cursor-pointer lg:hover:text-blue-600 block transition-all'
-                        >
-                            Contact Us
-                            {hoveredLink === 'Contact' && (
-                                <div className='absolute mt-5 top-0 left-[60%]'>
-                                    <HoverCard 
-                                        titles={["Contact Us", "Recruitment"]} 
-                                        onMouseEnter={() => handleLinkMouseEnter('Contact')} 
-                                        onMouseLeave={handleLinkMouseLeave} 
-                                    />
-                                </div>
-                            )}
-                        </Link>
-                    </li>
-                </ul>
-            </div>
-        </header>
-    );
+export function Navbar() {
+  return (
+     <div className='sticky top-0 w-full z-50 h-24 bg-white flex justify-center items-center'>
+           <NavigationMenu >
+      <NavigationMenuList>
+      <NavigationMenuItem>
+          <Link href="/" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Home
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem >
+          <NavigationMenuTrigger className={cn("hover:text-customeprimary", )}>Services</NavigationMenuTrigger>
+          <NavigationMenuContent className={cn("absolute ")} >
+            <ul className="grid z-50 gap-3 p-4 rounded-lg md:w-[200px] border-b-[6px] border-b-customeprimary ">
+              <ListItem href="/translation-services" >
+                Translation Services
+              </ListItem>
+              <ListItem href="/transcription-services" >
+                Transcription Services
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>    
+          <NavigationMenuTrigger>Languages</NavigationMenuTrigger>
+          <NavigationMenuContent>
+          <ul className="grid z-50 gap-3 p-4 rounded-lg md:w-[200px] border-b-[6px] border-b-customeprimary ">
+              <ListItem href="/languages" >
+              Languages
+              </ListItem>
+              <ListItem href="/history-of-languages" >
+                History Of Languages
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/about-us" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              About Us
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>    
+          <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
+      
+         <NavigationMenuContent >
+          <ul className="grid z-50 gap-3 p-4 rounded-lg md:w-[200px] border-b-[6px] border-b-customeprimary ">
+              <ListItem href="/contact-us" >
+              Contact Us
+              </ListItem>
+              <ListItem href="/recruitment" >
+                Recruitment
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+     
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+    <Button  className="bg-customeprimary rounded-full p-2">Get a quote</Button>
+     </div>
+  )
 }
 
-export default Navbar;
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <a
+          ref={ref}
+          className={cn(
+            "",
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm leading-none">{title}</div>
+          <p className=" text-sm leading-snug text-muted-foreground hover:text-customeprimary">
+            {children}
+          </p>
+        </a>
+      </NavigationMenuLink>
+    </li>
+  )
+})
+ListItem.displayName = "ListItem"

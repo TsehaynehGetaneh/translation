@@ -17,14 +17,14 @@ function StatisticsCard({ number, label }:PropsType) {
         setCount(number); // Set count to the final number
         clearInterval(interval); // Stop the interval when count reaches the final number
       }
-    }, 100); // Adjust the interval speed as needed
+    }, 200); // Adjust the interval speed as needed
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [count, number]);
 
   return (
     <div className="flex flex-col items-center text-white">
-      <div className="text-6xl font-bold mb-2">{count}</div>
+      <div className="text-3xl font-bold ">{count}</div>
       <div className="font-bold text-md text-white">{label}</div>
     </div>
   );
