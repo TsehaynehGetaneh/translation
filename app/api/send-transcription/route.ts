@@ -34,7 +34,7 @@ export const POST = async function handler(req: NextRequest) {
 
       // Send email with the CV file as attachment and other form fields in the text body
       const { data, error } = await resend.emails.send({
-        from: `Acme <onboarding@resend.dev>`,
+        from: `HD translation & localization <onboarding@resend.dev>`,
         to: ['jobs@hdlocalization.com'], 
         subject: 'New CV Submission',
         text: emailText,

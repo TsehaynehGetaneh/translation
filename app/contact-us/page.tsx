@@ -1,9 +1,54 @@
+'use client'
+import { ChangeEvent, FormEvent, useState } from 'react';
 import Image from 'next/image';
 import banner from '@/public/images/banner.png';
 import { Mail, MapPinned, PhoneCall } from 'lucide-react';
 import { InputField } from '@/components/Input';
+import { toast } from 'react-toastify';
+
 
 function Page() {
+
+  const [formState, setFormState] = useState({
+    fullname: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+ });
+
+ // Function to handle input changes
+ const handleInputChange = (event:ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormState(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
+ };
+
+ // Function to handle form submission
+ const handleSubmit = async (event:FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  try {
+    const response = await fetch('/api/contact-us', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formState),
+    });
+    if (response.ok) {
+      // Handle success
+      toast.success('Email sent successfully!');
+    } else {
+      // Handle error
+      toast.error('Failed to send email');
+    }
+  } catch (error) {
+    toast.error('An error occurred:');
+  }
+};
+
   return (
     <div className='w-full relative'>
       <div className="font-sans text-[#F9F9F9] relative z-10">
@@ -66,22 +111,22 @@ function Page() {
         </div>
       </div>
       <div className='w-full px-3'>
-<form action="" className='md:max-w-3xl  sm:max-w-lg max-w-xl  mx-auto'>
-  <h1 className="text-3xl font-bold text-center mb-5 text-customeprimary">Translator Application Form</h1>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <InputField id='fullname' name='fullname' placeholder='Full Name'/>
-      <InputField id='email' name='email' placeholder='Email Address'/>
-      <InputField id='phone' name='phone' placeholder='Your Phone'/>
-      <InputField id='subject' name='subject' placeholder='Subject'/>
-      <textarea  id="message" rows={4} className="block col-span-1 md:col-span-2 p-2.5 w-full text-sm text-gray-900 rounded-lg border border-blue-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-blue-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Message"></textarea>         
-  </div>
-  <div className="mt-4 justify-self-center text-center col-span-1 self-center md:col-span-2">
-    <button type="submit" className="w-40 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-      Send Message
-    </button>
-  </div>
-</form>
-</div>
+        <form onSubmit={handleSubmit} className='md:max-w-3xl sm:max-w-lg max-w-xl mx-auto'>
+          <h1 className="text-3xl font-bold text-center mb-5 text-customeprimary">Translator Application Form</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InputField onChange={handleInputChange} value={formState.fullname} id='fullname' name='fullname' placeholder='Full Name'/>
+            <InputField onChange={handleInputChange} value={formState.email} id='email' name='email' placeholder='Email Address'/>
+            <InputField onChange={handleInputChange} value={formState.phone} id='phone' name='phone' placeholder='Your Phone'/>
+            <InputField onChange={handleInputChange} value={formState.subject} id='subject' name='subject' placeholder='Subject'/>
+            <textarea id="message" rows={4} name='message' value={formState.message} onChange={handleInputChange} className="block col-span-1 md:col-span-2 p-2.5 w-full text-sm text-gray-900 rounded-lg border border-blue-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-blue-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Message"></textarea>         
+          </div>
+          <div className="mt-4 justify-self-center text-center col-span-1 self-center md:col-span-2">
+            <button type="submit" className="w-40 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

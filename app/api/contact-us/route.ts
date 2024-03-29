@@ -7,14 +7,14 @@ export const POST = async function handler(req: NextRequest) {
   if (req.method === 'POST') {
     const body = await req.json();
     try {
-      const { fullName, email, phone, company, projectType, sourceLanguage, targetLanguage, volumeOfContent, subjectMatter, additionalProjectDetails, fileFormat, preferredFileFormat, additionalServices, budget, paymentMethod, date } = body;
+        const { fullname, email, phone, subject, message } = body;
 
-      const text = `FullName: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nProject Type: ${projectType}\nSource Language: ${sourceLanguage}\nTarget Language: ${targetLanguage}\nVolume of Content: ${volumeOfContent}\nSubject Matter: ${subjectMatter}\nAdditional Project Details: ${additionalProjectDetails}\nFile Format: ${fileFormat}\nPreferred File Format: ${preferredFileFormat}\nAdditional Services: ${additionalServices}\nBudget: ${budget}\nPayment Method: ${paymentMethod}\nDate: ${date}`;
-
+        const text = `Full Name: ${fullname}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`;
+    
       const { data, error } = await resend.emails.send({
         from: `HD translation & localization <onboarding@resend.dev>`,
-        to: ['sales@hdlocalization.com'], 
-        subject: 'New Quote Request',
+        to: ['Contactus@hdlocalization.com'], 
+        subject: `${subject}`,
         text: text
       });
 
