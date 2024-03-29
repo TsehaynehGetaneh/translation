@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 
 
 function Page() {
-
+  const [isLoading,setIsLoading]= useState(false)
   const [formState, setFormState] = useState({
     fullname: '',
     email: '',
@@ -29,6 +29,7 @@ function Page() {
  // Function to handle form submission
  const handleSubmit = async (event:FormEvent<HTMLFormElement>) => {
   event.preventDefault();
+  setIsLoading(true)
   try {
     const response = await fetch('/api/contact-us', {
       method: 'POST',
@@ -46,6 +47,9 @@ function Page() {
     }
   } catch (error) {
     toast.error('An error occurred:');
+  }
+  finally{
+    setIsLoading(false)
   }
 };
 
@@ -122,7 +126,7 @@ function Page() {
           </div>
           <div className="mt-4 justify-self-center text-center col-span-1 self-center md:col-span-2">
             <button type="submit" className="w-40 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-              Send Message
+             { isLoading?"Sending ....":"Send Message"}
             </button>
           </div>
         </form>
