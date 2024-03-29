@@ -12,7 +12,7 @@ import studyHeadphone from '@/public/images/study-headphone.jpg'
 import dots from '@/public/images/dots.svg'
 import Image from 'next/image'
 
-function page() {
+function page() { 
   return (
     <div className='w-full mt-10'>
 <div className="relative overflow-hidden [clip-path:polygon(0%_0%,100%_0%,100%_85%,0%_100%)]">
@@ -146,7 +146,7 @@ function page() {
       from anywhere. Indeed, our approach to our work makes us the trusted partner of many businesses
        across the globe. Below are just some of the reviews from our happy customers. “HD Translation and Localization 
        offered us professional transcription services and quick turnarounds every time. We have used them for multiple projects 
-       for training our global team and we would recommend them for any transcription queries.” “I always use this agency and can’t 
+       for training our global team and we would recommend them for any transcription queries.” “I always use this agency and can&apos;t 
        imagine hiring anywhere else. Their audio transcriptions are perfect and help me connect with a global audience with ease. Thanks HD Translation and Localization!”
       </p>
     </div>

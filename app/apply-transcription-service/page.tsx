@@ -2,7 +2,7 @@
 
 import { InputField } from '@/components/Input'
 import { SelectField } from '@/components/SelectField'
-import React, { useState, ChangeEvent, FormEvent } from 'react'
+import { useState, ChangeEvent, FormEvent } from 'react'
 import { toast } from 'react-toastify';
 
 interface FormData {
@@ -24,7 +24,7 @@ interface FormData {
   cv: File | null;
  }
 
-function pagge() {
+function page() {
   const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     fullname: '',
@@ -182,4 +182,4 @@ const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
   )
 }
 
-export default pagge
+export default page
