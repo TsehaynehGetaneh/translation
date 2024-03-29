@@ -20,9 +20,9 @@ function page() {
     <div className="bg-gray-100 w-full flex justify-center py-8 px-6 text-center z-50 h-[28rem]">
       <div className="max-w-[66rem]">
 
-        <h2 className="text-3xl font-bold mb-4 my-10 text-blue-500 tracking-wide">Professional Transcription Services</h2>
+        <h2 className="text-3xl font-bold mb-4 my-10 text-blue-500 mt-5 tracking-wide">Professional Transcription Services</h2>
         <p className="text-sm tracking-wide leading-[2]">
-        At HD Translation and Localization, we provide affordable and professional transcription services to businesses. In today's digital age, utilizing videos for effective brand communication, product promotion, and sales is crucial. Whether it's for training materials, self-learning content, or global customer support, videos and audios play a key role. Our skilled native speakers, proficient in over 50 languages across various sectors, support your business's global expansion. From simple interviews to extensive recordings, we handle projects of all sizes with accuracy and efficiency. Count on us for reliable transcriptions that won't strain your budget. Entrust your video and audio transcription needs to us, and let's together expand your presence into global markets.
+        At HD Translation and Localization, we provide affordable and professional transcription services to businesses. In today&apos;s digital age, utilizing videos for effective brand communication, product promotion, and sales is crucial. Whether it&apos;s for training materials, self-learning content, or global customer support, videos and audios play a key role. Our skilled native speakers, proficient in over 50 languages across various sectors, support your business&apos;s global expansion. From simple interviews to extensive recordings, we handle projects of all sizes with accuracy and efficiency. Count on us for reliable transcriptions that won&apos;t strain your budget. Entrust your video and audio transcription needs to us, and let&apos;s together expand your presence into global markets.
         </p>
       </div>
     </div>

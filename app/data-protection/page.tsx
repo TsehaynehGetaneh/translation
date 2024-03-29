@@ -6,7 +6,7 @@ export default function DataProtectionPrivacyPolicy() {
         <ol className="list-decimal pl-6">
           <li className="mb-4">
             <h2 className="text-xl font-bold">INTRODUCTIONS</h2>
-            <p>HD Translation and Localization ("we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Data Protection &amp; Privacy Policy outlines how we collect, use, disclose, and protect your data when you engage with our translation and localization services.</p>
+            <p>HD Translation and Localization (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting the privacy and security of your personal information. This Data Protection &amp; Privacy Policy outlines how we collect, use, disclose, and protect your data when you engage with our translation and localization services.</p>
           </li>
           <li className="mb-4">
             <h2 className="text-xl font-bold">INFORMATION WE COLLECT</h2>

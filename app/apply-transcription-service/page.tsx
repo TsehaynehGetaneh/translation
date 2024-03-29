@@ -24,7 +24,7 @@ interface FormData {
   cv: File | null;
  }
 
-function page() {
+function Page() {
   const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     fullname: '',
@@ -182,4 +182,4 @@ const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
   )
 }
 
-export default page
+export default Page
