@@ -98,7 +98,7 @@ function Pagge() {
             <InputField onChange={handleChange} value={formData.address} id='address' name='address' placeholder='Address'/>
             <InputField onChange={handleChange} value={formData.nativeLanguage} id='nativeLanguage' name='nativeLanguage' placeholder='Native Language'/>
             <InputField onChange={handleChange} value={formData.sourceLanguage} id='sourceLanguage' name='sourceLanguage' placeholder='Source Language(s)'/> 
-            <InputField onChange={handleChange} value={formData.experience} id='experience' name='experience' placeholder='Years Of Transcription Experience'/>
+            <InputField onChange={handleChange} value={formData.experience} id='experience' name='experience' placeholder='Years Of Translation Experience'/>
             <InputField onChange={handleChange} value={formData.fieldOfStudy} id='fieldOfStudy' name='fieldOfStudy' placeholder='Field Of Study '/>
             <SelectField onChange={handleChange} value={formData.education} name='education' id='education' options={[
                 {value:"Highest Education Level",label:"Highest Education Level"},

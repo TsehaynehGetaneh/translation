@@ -49,11 +49,7 @@ const Navbar = () => {
                     <Link href="/transcription-services" >  Transcription Services </Link>
                     </li>
                     <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
-                    <Link href="#" >  Subtitling</Link>
-                    </li> <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
-                    <Link href="#" >  Localization </Link>
-                    </li> <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
-                    <Link href="#" >  Voiceovering </Link>
+                    <Link href="#" >  Subtitling/Localization/Voiceovering</Link>
                     </li>
                   </ul>
                 </div>

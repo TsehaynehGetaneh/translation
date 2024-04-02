@@ -28,9 +28,7 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) =>
       subItems: [
         { title: "Translation Services", link: "/translation-services" },
         { title: "Transcription Services", link: "/transcription-services" },
-        { title: "Subtitling", link: "#" },
-        { title: "Localization", link: "#" },
-        { title: "Voiceovering", link: "#" },
+        { title: "Subtitling/Localization/Voiceovering", link: "#" },
       ],
     },
     {
