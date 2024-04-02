@@ -20,12 +20,13 @@ const Navbar = () => {
       <header
         data-aos="fade"
         data-aos-duration="300"
-        className="fixed top-0 bg-white md:z-[999]   w-full text-sm text-black "
+        className="fixed top-0 bg-white z-[999]   w-full text-sm text-black "
       >
         <nav className=" flex h-[100px] whitespace-nowrap w-[80%] mx-auto items-center justify-between md:justify-center py-2 ">
           {/* Desktop Menu */}
           <Link href={'/'} className="cursor-pointer mr-10"> 
-              <Image src={Logo.src} alt="logo" width={120} height={120}/>
+              <Image src={Logo.src} alt="logo" width={120} className="relative mb-3" height={120}/>
+              <span className="text-xs text-green-500 font-bold pl-1  absolute top-20">Bridge the Gap</span>
             </Link>
           <div className="hidden md:flex items-center justify-center">
             <ul className="flex items-center gap-5">
@@ -46,6 +47,13 @@ const Navbar = () => {
                     </li>
                     <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
                     <Link href="/transcription-services" >  Transcription Services </Link>
+                    </li>
+                    <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
+                    <Link href="#" >  Subtitling</Link>
+                    </li> <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
+                    <Link href="#" >  Localization </Link>
+                    </li> <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
+                    <Link href="#" >  Voiceovering </Link>
                     </li>
                   </ul>
                 </div>
@@ -79,7 +87,7 @@ const Navbar = () => {
                 >
                                 Contact Us{" "}
                 </a>
-                <div className="absolute -left-9 z-[9999] border-b-[6px] border-b-customeprimary rounded-lg hidden w-[150px] bg-white py-2 text-black group-hover:block  ">
+                <div className="absolute -left-9 z-[9999] border-b-[6px] border-b-customeprimary rounded-lg hidden w-[160px] bg-white py-2 text-black group-hover:block  ">
                   <ul className="space-y-1">
                     <li className="py-1 px-4 hover:bg-customeprimary hover:text-white">
                     <Link href="/contact-us" > Contact Us</Link>

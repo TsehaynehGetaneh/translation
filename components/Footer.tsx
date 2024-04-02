@@ -37,15 +37,15 @@ function Footer() {
                   Email: info@hdtranslation.com
                 </span>
               </li>
-              <div className="flex justify-center lg:justify-start space-x-5"> {/* Center icons on small screens, left-align on large screens */}
+              <div className="flex justify-center items-center lg:justify-start space-x-5"> {/* Center icons on small screens, left-align on large screens */}
                 <Link href="https://www.facebook.com/Islam.is.cod.of.life?mibextid=ZbWKwL">
-                  <FaFacebook color='blue' size={25} />
+                  <FaFacebook color='blue' size={40} />
                 </Link>
                 <Link href="https://www.linkedin.com/company/hd-translationservices/">
-                  <TiSocialLinkedinCircular color='blue' size={30} />
+                  <TiSocialLinkedinCircular color='blue' size={55} />
                 </Link>
                 <Link href="https://www.proz.com/business/189428-hd-translation-localization">
-                  <Image src={prozLogo} alt="logo" width={30} />
+                  <Image src={prozLogo} alt="logo" width={55}  />
                 </Link>
               </div>
             </ul>

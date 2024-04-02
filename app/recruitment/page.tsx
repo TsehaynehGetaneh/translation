@@ -27,20 +27,22 @@ function Page() {
         </div>
       </div>
     </div>
-    <div className="mt-20 ">
+    <div className="mt-20 flex flex-col items-center justify-center ">
     <h2 className="text-2xl font-extrabold text-customeprimary text-center mb-4">Freelance Job Opportunities</h2>
     <p className='max-w-4xl text-black text-center text-sm mx-auto'>Anyone looking to become part of our company can discover more about our job opportunities below. Before applying for any role, please review our website thoroughly to familiarise yourself with the services and areas of expertise our company offers.</p>
    <p className="mt-5 mx-auto text-center max-w-4xl text-sm">
    If you have any of the following skills, please apply:
    </p>
-   <div className="mt-5 flex justify-center gap-3">
-   <Link href={'/translation-services'} type="button"
+   <div className="mt-5 flex md:flex-row flex-col md:w-full items-center  w-8/12 justify-center gap-3">
+   <Link href={'/apply-translation-services'} type="button"
     className="px-10 py-3 min-w-[140px] shadow-md shadow-gray-700 text-sm tracking-wider font-medium outline-none bg-customeprimary text-white active:shadow-inner">
       Translation Services</Link>
-    <Link href={'/transcription-services'} type="button"
+    <Link href={'/apply-transcription-service'} type="button"
     className="px-10 py-3 min-w-[140px] shadow-md shadow-gray-700 text-sm tracking-wider font-medium outline-none bg-customeprimary text-white active:shadow-inner">
       Transcription Services</Link>
- 
+      <Link href={'/subtitling-Localization-Voiceovering'} type="button"
+    className="px-10 py-3 capitalize min-w-[140px] shadow-md shadow-gray-700 text-sm tracking-wider font-medium outline-none bg-customeprimary text-white active:shadow-inner">
+      subtitling/Localization/Voiceovering</Link>
    </div>
     </div>
     </div>

@@ -121,7 +121,7 @@ const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
   return (
     <div className='w-full mt-20 bg-gradient-to-r from-[#FEFEFE] to-[#FAFAFB]'>
       <form onSubmit={handleSubmit} className='md:max-w-4xl sm:max-w-lg max-w-xl  mx-auto '>
-        <h1 className="text-3xl font-bold text-center mb-5 text-customeprimary">Transcription Application Form</h1>
+        <h1 className="text-3xl font-bold text-center mb-5 text-customeprimary capitalize">subtitling/Localization/Voiceovering Application Form</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-1 gap-x-4">
           <InputField onChange={handleChange} value={formData.fullname} id='fullname' name='fullname' placeholder='Full Name' />
           <InputField onChange={handleChange} value={formData.email} id='email' name='email' placeholder='Email Address' />

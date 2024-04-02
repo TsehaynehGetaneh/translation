@@ -28,6 +28,9 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) =>
       subItems: [
         { title: "Translation Services", link: "/translation-services" },
         { title: "Transcription Services", link: "/transcription-services" },
+        { title: "Subtitling", link: "#" },
+        { title: "Localization", link: "#" },
+        { title: "Voiceovering", link: "#" },
       ],
     },
     {
@@ -63,7 +66,7 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) =>
 
   return (
     <div className={`${showMenu ? "block" : "hidden"} fixed inset-0 z-[1000] bg-gray-800 bg-opacity-50 transition-opacity duration-500 ease-in-out`}>
-      <div className={`fixed inset-y-0 left-0 z-50 w-2/4 bg-white shadow-lg transform transition-transform duration-500 ease-in-out ${showMenu ? "translate-x-0" : "-translate-x-full"}`}>
+      <div className={`fixed inset-y-0 left-0 z-50 w-3/4 bg-white shadow-lg transform transition-transform duration-500 ease-in-out ${showMenu ? "translate-x-0" : "-translate-x-full"}`}>
         <div className="px-8 py-4 flex justify-end">
           <button onClick={onClose} className="p-2 rounded-full bg-customeprimary text-sm">
             <FaTimes className="text-white" size={18} />

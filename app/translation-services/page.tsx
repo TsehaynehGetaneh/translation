@@ -13,7 +13,7 @@ import Image from 'next/image'
 function page() {
   return (
     <div className='w-full mt-10'>
-<div className="relative overflow-hidden [clip-path:polygon(0%_0%,100%_0%,100%_85%,0%_100%)]">
+<div className="relative overflow-hidden md:[clip-path:polygon(0%_0%,100%_0%,100%_85%,0%_100%)]">
   <div className="flex justify-center items-center">
     <div className="bg-gray-100 w-full flex justify-center py-8 px-6 text-center z-50 h-[28rem]">
       <div className="max-w-[66rem]">
