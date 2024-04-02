@@ -89,7 +89,7 @@ function Pagge() {
 
   return (
     <div className='w-full mt-10'>
-      <form onSubmit={handleSubmit} className='md:max-w-4xl sm:max-w-lg max-w-xl  mx-auto'>
+      <form onSubmit={handleSubmit} className='md:max-w-4xl mx-5 sm:max-w-lg max-w-xl  md:mx-auto'>
         <h1 className="text-xl md:w-full ax-w-3xl font-bold text-center mb-5 text-customeprimary capitalize">subtitling/Localization/Voiceovering</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <InputField onChange={handleChange} value={formData.fullname} id='fullname' name='fullname' placeholder='Full Name'/>
@@ -98,7 +98,7 @@ function Pagge() {
             <InputField onChange={handleChange} value={formData.address} id='address' name='address' placeholder='Address'/>
             <InputField onChange={handleChange} value={formData.nativeLanguage} id='nativeLanguage' name='nativeLanguage' placeholder='Native Language'/>
             <InputField onChange={handleChange} value={formData.sourceLanguage} id='sourceLanguage' name='sourceLanguage' placeholder='Source Language(s)'/> 
-            <InputField onChange={handleChange} value={formData.experience} id='experience' name='experience' placeholder='Years Of Translation Experience'/>
+            <InputField onChange={handleChange} value={formData.experience} id='experience' name='experience' placeholder='Years Of Subtitling/Localization/Voiceovering Experience'/>
             <InputField onChange={handleChange} value={formData.fieldOfStudy} id='fieldOfStudy' name='fieldOfStudy' placeholder='Field Of Study '/>
             <SelectField onChange={handleChange} value={formData.education} name='education' id='education' options={[
                 {value:"Highest Education Level",label:"Highest Education Level"},

@@ -70,15 +70,15 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) =>
             <FaTimes className="text-white" size={18} />
           </button>
         </div>
-        <nav className="px-8 py-2">
-          <ul className="space-y-4 text-xl">
+        <nav className="px-2 py-2">
+          <ul className="space-y-4 ">
             {menuItems.map((menuItem, index) => (
               <li key={index}>
-                <a href="#" className="mb-2 inline-block max-w-fit" onClick={(e) => handleParentClick(e, menuItem.title)}>
+                <a href="#" className="mb-2 inline-block " onClick={(e) => handleParentClick(e, menuItem.title)}>
                   {menuItem.title}
                 </a>
                 {menuItem.subItems && menuItem.title === activeMenu && (
-                  <ul className="ml-4 border-b-[6px] space-y-2 shadow-md border-b-customeprimary rounded-lg p-2 max-w-[250px]">
+                  <ul className=" border-b-[6px] space-y-2 max-w-fit shadow-md border-b-customeprimary rounded-lg p-2">
                     {menuItem.subItems.map((subItem, subIndex) => (
                       <li key={subIndex}>
                         <a href={subItem.link}>{subItem.title}</a>
