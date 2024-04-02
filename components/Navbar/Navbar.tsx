@@ -40,7 +40,7 @@ const Navbar = () => {
                 >
                   Services{" "}
                 </Link>
-                <div className="absolute -left-7  ease-in-out transition-all duration-700 transform scale-95 shadow-lg border-b-[6px] border-b-customeprimary rounded-lg z-[9999] hidden w-[170px] bg-white py-2 text-black group-hover:block  ">
+                <div className="absolute -left-7  ease-in-out transition-all duration-700 transform scale-95 shadow-lg border-b-[6px] border-b-customeprimary rounded-lg z-[9999] hidden w-[200px] bg-white py-2 text-black group-hover:block  ">
                   <ul className="space-y-1">
                     <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
                     <Link href="/translation-services" >Translation Services </Link>
