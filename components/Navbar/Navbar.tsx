@@ -48,7 +48,7 @@ const Navbar = () => {
                     <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
                     <Link href="/transcription-services" >  Transcription Services </Link>
                     </li>
-                    <li className="px-4 py-1 hover:bg-customeprimary hover:text-white">
+                    <li className="px-4 py-1 max-w-fit hover:bg-customeprimary hover:text-white">
                     <Link href="#" >  Subtitling/Localization/Voiceovering</Link>
                     </li>
                   </ul>

@@ -74,7 +74,7 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) =>
           <ul className="space-y-4 text-xl">
             {menuItems.map((menuItem, index) => (
               <li key={index}>
-                <a href="#" className="mb-2 inline-block" onClick={(e) => handleParentClick(e, menuItem.title)}>
+                <a href="#" className="mb-2 inline-block max-w-fit" onClick={(e) => handleParentClick(e, menuItem.title)}>
                   {menuItem.title}
                 </a>
                 {menuItem.subItems && menuItem.title === activeMenu && (
