@@ -14,7 +14,6 @@ function Pagge() {
     nativeLanguage: '',
     sourceLanguage: '',
     experience: '',
-    fieldOfStudy: '',
     education: '',
     cv: null
   });
@@ -65,7 +64,6 @@ function Pagge() {
           nativeLanguage: '',
           sourceLanguage: '',
           experience: '',
-          fieldOfStudy: '',
           education: '',
           cv: null
          });
@@ -99,7 +97,6 @@ function Pagge() {
             <InputField onChange={handleChange} value={formData.nativeLanguage} id='nativeLanguage' name='nativeLanguage' placeholder='Native Language'/>
             <InputField onChange={handleChange} value={formData.sourceLanguage} id='sourceLanguage' name='sourceLanguage' placeholder='Source Language(s)'/> 
             <InputField onChange={handleChange} value={formData.experience} id='experience' name='experience' placeholder='Years Of Subtitling/Localization/Voiceovering Experience'/>
-            <InputField onChange={handleChange} value={formData.fieldOfStudy} id='fieldOfStudy' name='fieldOfStudy' placeholder='Field Of Study '/>
             <SelectField onChange={handleChange} value={formData.education} name='education' id='education' options={[
                 {value:"Highest Education Level",label:"Highest Education Level"},
                 {value:"Bachelors Degree",label:"Bachelors Degree"},
