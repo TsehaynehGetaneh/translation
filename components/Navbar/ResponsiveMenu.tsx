@@ -14,7 +14,10 @@ interface ResponsiveMenuProps {
   onClose: () => void; // Callback function for closing the menu
 }
 
-const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) => {
+const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({
+  showMenu,
+  onClose,
+}) => {
   const [activeMenu, setActiveMenu] = useState("");
 
   const menuItems: MenuItem[] = [
@@ -63,10 +66,17 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) =>
   };
 
   return (
-    <div className={`${showMenu ? "block" : "hidden"} fixed inset-0 z-[1000] bg-gray-800 bg-opacity-50 transition-opacity duration-500 ease-in-out`}>
-      <div className={`fixed inset-y-0 left-0 z-50 w-3/4 bg-white shadow-lg transform transition-transform duration-500 ease-in-out ${showMenu ? "translate-x-0" : "-translate-x-full"}`}>
+    <div
+      className={`${showMenu ? "block" : "hidden"} fixed inset-0 z-[1000] bg-gray-800 bg-opacity-50 transition-opacity duration-500 ease-in-out`}
+    >
+      <div
+        className={`fixed inset-y-0 left-0 z-50 w-3/4 bg-white shadow-lg transform transition-transform duration-500 ease-in-out ${showMenu ? "translate-x-0" : "-translate-x-full"}`}
+      >
         <div className="px-8 py-4 flex justify-end">
-          <button onClick={onClose} className="p-2 rounded-full bg-customeprimary text-sm">
+          <button
+            onClick={onClose}
+            className="p-2 rounded-full bg-customeprimary text-sm"
+          >
             <FaTimes className="text-white" size={18} />
           </button>
         </div>
@@ -74,7 +84,11 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) =>
           <ul className="space-y-4 ">
             {menuItems.map((menuItem, index) => (
               <li key={index}>
-                <a href="#" className="mb-2 inline-block " onClick={(e) => handleParentClick(e, menuItem.title)}>
+                <a
+                  href="#"
+                  className="mb-2 inline-block "
+                  onClick={(e) => handleParentClick(e, menuItem.title)}
+                >
                   {menuItem.title}
                 </a>
                 {menuItem.subItems && menuItem.title === activeMenu && (
@@ -89,12 +103,16 @@ const ResponsiveMenu: React.FC<ResponsiveMenuProps> = ({ showMenu, onClose }) =>
               </li>
             ))}
           </ul>
-          <Link href={'/get-a-quote'}>
-            <Button onClick={onClose} className="bg-white border-customeprimary font-bold text-customeprimary border-2 w-full mt-5 p-4">Get a Quote</Button>
-       </Link>
+          <Link href={"/get-a-quote"}>
+            <Button
+              onClick={onClose}
+              className="bg-white border-customeprimary font-bold text-customeprimary border-2 w-full mt-5 p-4"
+            >
+              Get a Quote
+            </Button>
+          </Link>
         </nav>
       </div>
-
     </div>
   );
 };

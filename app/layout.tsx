@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Inter,Open_Sans } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
-import ToastProvider from "@/lib/react-toastify/ToastProvider"
+import ToastProvider from "@/lib/react-toastify/ToastProvider";
 
 const inter = Open_Sans({ subsets: ["latin"] });
 
@@ -20,16 +20,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-full" >
-      <body className={inter.className + "w-full mx-auto flex flex-col items-center justify-center"}>
+    <html lang="en" className="w-full">
+      <body
+        className={
+          inter.className +
+          "w-full mx-auto flex flex-col items-center justify-center"
+        }
+      >
         <Navbar />
-      <div className="mt-16 w-full">
-      <ToastProvider>
-          {children}
-        </ToastProvider>
-      </div>
+        <div className="mt-16 w-full">
+          <ToastProvider>{children}</ToastProvider>
+        </div>
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

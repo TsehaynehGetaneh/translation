@@ -1,18 +1,20 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-interface PropsType{
-    number:number,
-    label:string
+interface PropsType {
+  number: number;
+  label: string;
 }
-function StatisticsCard({ number, label }:PropsType) {
+function StatisticsCard({ number, label }: PropsType) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (count < number) {
-        setCount(prevCount => prevCount + Math.ceil((number - prevCount) / 5)); // Increment count
+        setCount(
+          (prevCount) => prevCount + Math.ceil((number - prevCount) / 5),
+        ); // Increment count
       } else {
         setCount(number); // Set count to the final number
         clearInterval(interval); // Stop the interval when count reaches the final number

@@ -1,17 +1,24 @@
-'use client'
+"use client";
 
-import React from 'react';
+import React from "react";
 
 interface InputFieldProps {
   id: string;
   placeholder: string;
   name: string;
   value: string;
-  type?:'text'
+  type?: "text";
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
- }
+}
 
-export const InputField: React.FC<InputFieldProps> = ({ id, placeholder, name,value,onChange,type }) => {
+export const InputField: React.FC<InputFieldProps> = ({
+  id,
+  placeholder,
+  name,
+  value,
+  onChange,
+  type,
+}) => {
   return (
     <div className="mb-3 relative">
       <input
